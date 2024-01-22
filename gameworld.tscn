@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ukhm734ncaxx"]
+
+[ext_resource type="Script" path="res://gameworld.gd" id="1_v00uy"]
+[ext_resource type="PackedScene" uid="uid://cd6krisqqdcly" path="res://falling_object.tscn" id="2_e56e7"]
+[ext_resource type="PackedScene" uid="uid://c5jbkd3cnnhs5" path="res://player.tscn" id="3_q2v1v"]
+
+[sub_resource type="Gradient" id="Gradient_sv3ol"]
+offsets = PackedFloat32Array(0.167742, 1)
+colors = PackedColorArray(9.35823e-07, 0.481029, 0, 1, 0.215686, 0.560784, 0.184314, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sw4en"]
+gradient = SubResource("Gradient_sv3ol")
+fill_from = Vector2(0, 0.454128)
+fill_to = Vector2(0.997706, 0.483945)
+
+[node name="Gameworld" type="Node2D"]
+script = ExtResource("1_v00uy")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(644, 357)
+scale = Vector2(20.2031, 11.3281)
+texture = SubResource("GradientTexture2D_sw4en")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="FallingObject" parent="." instance=ExtResource("2_e56e7")]
+position = Vector2(625, -59)
+
+[node name="Player" parent="." instance=ExtResource("3_q2v1v")]
+position = Vector2(641, 653)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, 364)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
