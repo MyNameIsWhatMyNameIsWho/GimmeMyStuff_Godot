@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705925803
+falling_object.gd::GDScript::-1::1705757400::0::1::::<>Area2D<>::
+falling_object.tscn::PackedScene::5048041585841949614::1705758151::0::1::::<><>::res://falling_object.gd<>uid://cvkg0kbdmfjnu::::res://icon.svg
+gameworld.gd::GDScript::-1::1705757587::0::1::::<>Node2D<>::
+gameworld.tscn::PackedScene::1424868824114276773::1705758187::0::1::::<><>::res://gameworld.gd<>uid://cd6krisqqdcly::::res://falling_object.tscn<>uid://c5jbkd3cnnhs5::::res://player.tscn
+gitignore.txt::TextFile::-1::1705925119::0::1::::<><>::
+icon.svg::CompressedTexture2D::6267860335060556666::1705588723::1705925804::1::::<><>::
+Player.gd::GDScript::-1::1705755455::0::1::::<>Area2D<>::
+player.tscn::PackedScene::6897164852178864022::1705758151::0::1::::<><>::res://Player.gd<>uid://cvkg0kbdmfjnu::::res://icon.svg
